@@ -13,6 +13,8 @@ struct Cancion
 // Prototipos de funciones
 Cancion dameCancion();
 Cancion *crearNodo(Cancion *&pila, Cancion tema);
+void pushCancion(Cancion*& pila, Cancion tema);
+Cancion popCancion(Cancion *&pila, Cancion tema);
 
 int main()
 {
@@ -48,7 +50,7 @@ void pushCancion(Cancion*& pila, Cancion tema)
 }
 
 
-void popCancion(Cancion*& pila){
+Cancion popCancion(Cancion*& pila){
     if (pila == nullptr)
     {
         cout << "La playlist esta vacia."<<endl;
@@ -63,3 +65,4 @@ void popCancion(Cancion*& pila){
     return cancionActual;
     
 }
+
